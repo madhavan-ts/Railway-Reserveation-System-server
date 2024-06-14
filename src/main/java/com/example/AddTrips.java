@@ -25,9 +25,9 @@ public class AddTrips extends HttpServlet {
 	    response.setHeader("Access-Control-Allow-Headers", "Content-Type");
 	    String rid = request.getParameter("routeID");
 	    String startTime = request.getParameter("startTime");
-	    System.out.println(startTime);
-	    String trainId = request.getParameter("trainID");
+	    String trainId = request.getParameter("trainID");	    
 	    int dayNo = Integer.parseInt(request.getParameter("dayNo"));
+	    System.out.println(startTime);
 	    JSONObject j = AdminOperationsService.addTrip(new Trip(rid,trainId,startTime,dayNo));
 	    response.getWriter().print(j.toString());
 	

@@ -11,7 +11,6 @@ import com.example.models.User;
 
 public class LoginService {
 	public static Admin checkAdminAccess(LoginCredentials l) {
-		
 		try(Connection conn = DBControllerManager.getConnection()){
 			PreparedStatement st = conn.prepareStatement("SELECT (email,firstName,lastName,phoneNumber,address,employeeID,position) FROM admin WHERE email = ? and password = ?");
 			st.setString(1,l.getEmail());
@@ -27,7 +26,6 @@ public class LoginService {
 	}
 	
 	public static User checkUserLogin(LoginCredentials l) {
-		
 		PreparedStatement st=null;
 		try(Connection conn = DBControllerManager.getConnection()){
 			st = conn.prepareStatement("SELECT email,name,phone FROM users WHERE email = ? and password = ?");

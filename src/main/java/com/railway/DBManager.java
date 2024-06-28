@@ -1,11 +1,11 @@
-package com.example;
+package com.railway;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBControllerManager {
-	private static final String JDBC_URL = "jdbc:mysql://localhost:3308/RailwayReservation";
+public class DBManager {
+	private static final String JDBC_URL = "jdbc:mysql://localhost:3308/rail";
 	private static final String USERNAME = "root";
 	private static final String PASSWORD = "";
 	

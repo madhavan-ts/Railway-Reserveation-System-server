@@ -1,4 +1,4 @@
-package com.example.models;
+package com.railway.models;
 
 public class Passenger {
 	String passengerName;

@@ -1,4 +1,4 @@
-package com.example.models;
+package com.railway.models;
 
 public class CompartmentSeat {
 	int c;
